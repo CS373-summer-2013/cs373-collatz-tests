@@ -1,0 +1,46 @@
+FFFF..F
+======================================================================
+FAIL: test_eval_1 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 48, in test_eval_1
+    self.assert_(v == 20)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_2 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 52, in test_eval_2
+    self.assert_(v == 125)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_3 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 56, in test_eval_3
+    self.assert_(v == 89)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_4 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 60, in test_eval_4
+    self.assert_(v == 174)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_solve (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "TestCollatz.py", line 79, in test_solve
+    self.assert_(w.getvalue() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.002s
+
+FAILED (failures=5)
+TestCollatz.py
