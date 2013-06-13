@@ -20,7 +20,7 @@ To test the program:
 import StringIO
 import unittest
 
-from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, cycle_length
+from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, cycle_length, meta_cache_max
 
 # -----------
 # TestCollatz
@@ -101,8 +101,12 @@ class TestCollatz (unittest.TestCase) :
 
     def test_eval_7 (self) :              # Input 1 test
         v = collatz_eval(1, 1)
-        print str(v)
         self.assert_(v == 1)
+ 
+    def test_eval_8 (self) :              # Test to see if endpoints are included
+        v = collatz_eval(5, 7)
+        self.assert_(v == 17)
+
 
     # ------------
     # cycle_length
@@ -111,11 +115,27 @@ class TestCollatz (unittest.TestCase) :
         v = cycle_length(5)
         self.assert_(v == 6)
     def test_cycle_length_2 (self) :
-        v = cycle_length(10)
-        self.assert_(v == 7)
+        v = cycle_length(7)
+        self.assert_(v == 17)
     def test_cycle_length_3 (self) :
         v = cycle_length(3)
         self.assert_(v == 8)
+
+    # ---
+    # max
+    # ---
+    def test_max_1 (self) :
+        v = meta_cache_max(10, 15)
+        self.assert_(v == 276)
+
+    def test_max_2 (self) :
+        v = meta_cache_max(998, 999)
+        self.assert_(v == 396)
+    
+    def test_max_3 (self) :
+        v = meta_cache_max(0, 5)
+        self.assert_(v == 238)
+
     # -----
     # print
     # -----
