@@ -1,7 +1,7 @@
-......x...xx...
+.........xx...xx.....
 ----------------------------------------------------------------------
-Ran 15 tests in 0.070s
+Ran 21 tests in 1.701s
 
-OK (expected failures=3)
+OK (expected failures=4)
 TestCollatz.py
 Ryan Niemann
