@@ -100,6 +100,18 @@ class TestCollatz (unittest.TestCase) :
         v = collatz_eval(900, 1000)
         self.assert_(v == 174)
 
+    def test_eval_5 (self) :
+        v = collatz_eval(1, 1)
+        self.assert_(v == 1)
+
+    def test_eval_6 (self) :
+        v = collatz_eval(1000000, 1000000)
+        self.assert_(v == 153)
+
+    def test_eval_7 (self) :
+        v = collatz_eval(1, 1000000)
+        self.assert_(v == 525)
+
 
     # -----
     # print
@@ -120,6 +132,12 @@ class TestCollatz (unittest.TestCase) :
         w = StringIO.StringIO()
         collatz_print(w, 1, 10, 20)
         self.assert_(w.getvalue() == "10 10 20\n")
+
+    @unittest.expectedFailure
+    def test_print_4 (self) :
+        w = StringIO.StringIO()
+        collatz_print(w, 100, 200)
+        self.assert_(w.getvalue() == "100 200 125\n")
 
     # -----
     # solve
@@ -143,11 +161,26 @@ class TestCollatz (unittest.TestCase) :
         collatz_solve(r, w)
         self.assert_(len(w.getvalue()) == 12)
 
+    def test_solve_4 (self) :
+        r = StringIO.StringIO("1 1\n")
+        w = StringIO.StringIO()
+        collatz_solve(r, w)
+        self.assertEqual(w.getvalue(), "1 1 1\n")
+
+    def test_solve_5 (self) :
+        r = StringIO.StringIO("1000000 1000000\n")
+        w = StringIO.StringIO()
+        collatz_solve(r, w)
+        self.assertEqual(w.getvalue(), "1000000 1000000 153\n")
+
 # ----
 # main
 # ----
 
 print "TestCollatz.py"
 print "Ryan Niemann"
-unittest.main()
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+    unittest.main()
 print "Done."
