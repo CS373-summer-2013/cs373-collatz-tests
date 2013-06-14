@@ -20,7 +20,7 @@ To test the program:
 import StringIO
 import unittest
 
-from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, collatz_cycle
+from Collatz import collatz_read, collatz_eval, collatz_print, collatz_solve, collatz_cycle, cache
 
 # -----------
 # TestCollatz
@@ -97,7 +97,18 @@ class TestCollatz (unittest.TestCase) :
     def test_eval_7 (self) :
         v = collatz_eval(1, 1)
         self.assert_(v == 1)
+    
+    def test_eval_8 (self) :
+        v = collatz_eval(22, 22)
+        self.assert_(v == 16)
 
+    def test_eval_9 (self) :
+        v = collatz_eval(999, 999)
+        self.assert_(v == 50)
+
+    def test_eval_10 (self) :
+        v = collatz_eval(3, 3)
+        self.assert_(v == 8)
 
     # -----
     # cycle (my function)
@@ -107,7 +118,8 @@ class TestCollatz (unittest.TestCase) :
     def test_cycle_1 (self) :
         v = collatz_cycle(1)
         self.assert_(v == 1)
-        
+
+    #Tests for 2 - 6        
     def test_cycle_2 (self) :
         v = collatz_cycle(2)
         self.assert_(v == 2)
@@ -127,8 +139,19 @@ class TestCollatz (unittest.TestCase) :
     def test_cycle_6 (self) :
         v = collatz_cycle(6)
         self.assert_(v == 9)    
-    
 
+    def test_cycle_22 (self) :
+        v = collatz_cycle(22)
+        self.assert_(v == 16)
+    
+    #Cache dictionary tests
+    def test_cycle_dict1 (self) :
+        v = collatz_cycle(6)
+        self.assert_(cache.get(6) == v)
+
+    def test_cycle_dict2 (self) :
+        v = collatz_cycle(22)
+        self.assert_(cache.get(22) == v)
 
 
 
