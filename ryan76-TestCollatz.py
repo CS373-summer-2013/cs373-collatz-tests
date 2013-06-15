@@ -1,10 +1,10 @@
+#!/usr/bin/env python
+
 # Ryan Niemann
 # EID: rln548
 # CS 373
 # Glen P. Downing
 # 06/12/13
-
-#!/usr/bin/env python
 
 # -------------------------------
 # projects/collatz/TestCollatz.py
