@@ -1,0 +1,93 @@
+FFFFFFF........FFFF
+======================================================================
+FAIL: test_eval_1 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 73, in test_eval_1
+    self.assert_(v == 20)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_2 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 77, in test_eval_2
+    self.assert_(v == 125)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_3 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 81, in test_eval_3
+    self.assert_(v == 89)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_4 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 85, in test_eval_4
+    self.assert_(v == 174)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_5 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 90, in test_eval_5
+    self.assert_(v == 217)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_6 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 94, in test_eval_6
+    self.assert_(v == 262)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_eval_7 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 98, in test_eval_7
+    self.assert_(v == 324)
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_solve (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 133, in test_solve
+    self.assert_(w.getvalue() == "1 10 20\n100 200 125\n201 210 89\n900 1000 174\n")
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_solve1 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 140, in test_solve1
+    self.assert_(w.getvalue() == "3830 40652 324\n6519 2895 262\n2429 3496 217\n1185 38112 324\n")
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_solve2 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 146, in test_solve2
+    self.assert_(w.getvalue() == "400 23244 279\n8224 14575 276\n7395 47307 324\n9926 4367 262\n")
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_solve3 (__main__.TestCollatz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./TestCollatz.py", line 152, in test_solve3
+    self.assert_(w.getvalue() == "8002 29 262\n7860 46420 324\n6009 91 238\n6691 22030 279\n")
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.001s
+
+FAILED (failures=11)
